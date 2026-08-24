@@ -16,3 +16,13 @@ spring:
           for authenticated customers.
         #stdio: true
         protocol: STREAMABLE #not for local
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      probes:
+        enabled: true
